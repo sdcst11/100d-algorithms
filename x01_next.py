@@ -25,7 +25,7 @@ def next(current , myList):
     current=current+1
 
     if current>bin:
-      current=0
+      current=1
     ifcan=myList[current]
     print(ifcan)
     if ifcan == True:
@@ -38,6 +38,7 @@ def main():
   data = [False, True, True, False, True, False]
   print(next( 3 , data ))
   assert next( 3 , data ) == 4
+
   assert next( 4 , data ) == 1
   assert next( 1 , data ) == 2
   data = [True, True, False, False, True, False, True]
