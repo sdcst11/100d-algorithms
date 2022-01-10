@@ -25,7 +25,7 @@ def next(current , myList):
     current=current+1
 
     if current>bin:
-      current=1
+      current=0
     ifcan=myList[current]
     print(ifcan)
     if ifcan == True:
