@@ -18,19 +18,21 @@ def next(current , myList):
   determine the next item from the list. The list contains False/True Boolean values
   that indicate whether the current item can be used
   '''
-  for i in range(len(myList)):
-    bin=i
-  con=True
-  while con==True:
-    current=current+1
+  if True in myList:
+    bin=len(myList)-1
+    con=True
+    while con==True:
+      current=current+1
 
-    if current>bin:
-      current=0
-    ifcan=myList[current]
-    print(ifcan)
-    if ifcan == True:
-      con=False
-      return current 
+      if current>bin:
+        current=0
+      ifcan=myList[current]
+      print(ifcan , current, myList)
+      if ifcan == True:
+        con=False
+        return current 
+  else:
+    return None
       
 
 
