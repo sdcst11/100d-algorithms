@@ -15,6 +15,7 @@ def necklace(a,b):
   return
   str necklace number
   """
+  
   return None
 
 def main():
