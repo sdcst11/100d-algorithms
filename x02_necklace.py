@@ -16,13 +16,14 @@ def necklace(a,b):
   str necklace number
   """
   sec=""
+  a4=a
+  b4=b
   a2=str(a)
   b2=str(b)
   x2=a2+b2
   sec=sec+x2
   con=True
-  a4=a
-  b4=b
+  
   while con==True:
     x=a+b
     if x>10:
@@ -38,13 +39,11 @@ def necklace(a,b):
     sec=sec+x
     a=int(sec[-1])
     b=int(sec[-2])
-    print(sec)
     s=[sec[-1],sec[-2]]
-    print(s)
-    a3=s[0]
-    b3=s[1]
+    a3=int(s[0])
+    b3=int(s[1])
     if a3==b4 and b3==a4:
-      return None
+      return sec
 
 def main():
   assert necklace(9,4) == "94483257314595516742685494"
