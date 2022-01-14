@@ -15,15 +15,21 @@ def toBinary(value):
   bir=[]
   a=2
   b=1
+  if check=='0b0':
+    a0=[0,0,0,0,0,0,0,0]
+    return a0
   for i in range(len(check)-2):
     b=b+1
     ape=int(check[b])
     
     bir.append(ape)
-    print(bir)
     if0=bir[0]
-  if sdf==0:
-    
+  mal = int(len(bir))
+  mal=mal-1
+  lai=bir[mal]
+  if lai==0:
+    bir.insert(0,0)
+    del bir[-1]
   if len(bir)==8:
     return bir
   elif if0=='0':
@@ -57,7 +63,7 @@ def toDecimal(myList):
 def problem1():
   assert toBinary(0) == [0,0,0,0,0,0,0,0]
   assert toBinary(1) == [1,0,0,0,0,0,0,0]
-  #assert toBinary(2) == [0,1,0,0,0,0,0,0]
+  assert toBinary(2) == [0,1,0,0,0,0,0,0]
   assert toBinary(5) == [1,0,1,0,0,0,0,0]
   assert toBinary(10) == [0,1,0,1,0,0,0,0]
   assert toBinary(30) == [0,1,1,1,1,0,0,0]
